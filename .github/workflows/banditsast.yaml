@@ -29,6 +29,8 @@ jobs:
       - name: HCL AppScan
         uses: HCL-TECH-SOFTWARE/appscan-dast-action@v1.0.7
         with:
+          baseurl: "http://cloud.appscan.com"
           target: "http://localhost:5000"
           api_key: ${{ secrets.APPSCAN_API_KEYID }} 
           api_secret: ${{ secrets.APPSCAN_API_SECRET }} 
+          application_id: 5ea30201-13da-4104-ac5d-24e493ca1fd5
